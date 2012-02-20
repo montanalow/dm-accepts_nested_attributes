@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{dm-accepts_nested_attributes}
-  s.version = "1.1.0"
+  s.version = "1.3.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Martin Gamsjaeger (snusnu)"]
-  s.date = %q{2011-03-19}
+  s.date = %q{2012-02-19}
   s.description = %q{A datamapper plugin that allows nested model assignment like activerecord.}
   s.email = %q{gamsnjaga [a] gmail [d] com}
   s.extra_rdoc_files = [
@@ -122,15 +122,22 @@ Gem::Specification.new do |s|
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
-    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<dm-core>, [">= 1.1.0.rc0", "< 1.2"])
-      s.add_development_dependency(%q<dm-validations>, [">= 1.1.0.rc0", "< 1.2"])
-      s.add_development_dependency(%q<dm-constraints>, [">= 1.1.0.rc0", "< 1.2"])
-      s.add_development_dependency(%q<rake>, ["~> 0.8.7"])
-      s.add_development_dependency(%q<rspec>, ["~> 1.3"])
-      s.add_development_dependency(%q<yard>, ["~> 0.5"])
-      s.add_development_dependency(%q<rcov>, ["~> 0.9.7"])
-      s.add_development_dependency(%q<jeweler>, ["~> 1.5.2"])
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.3.0.beta')
+      s.add_runtime_dependency(%q<dm-core>, [">= 1.3.0.beta", "< 1.4"])
+      s.add_development_dependency(%q<dm-validations>, [">= 1.3.0.beta", "< 1.4"])
+      s.add_development_dependency(%q<dm-constraints>, [">= 1.3.0.beta", "< 1.4"])
+      s.add_development_dependency(%q<rake>, ["~> 0.9.2.2"])
+      s.add_development_dependency(%q<rspec>, ["~> 1.3.2"])
+      s.add_development_dependency(%q<yard>, ["~> 0.7.2"])
+      s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
+    elsif Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0.rc2')
+      s.add_dependency(%q<dm-core>, [">= 1.2.0.rc2", "< 1.3"])
+      s.add_dependency(%q<dm-validations>, [">= 1.2.0.rc2", "< 1.3"])
+      s.add_dependency(%q<dm-constraints>, [">= 1.2.0.rc2", "< 1.3"])
+      s.add_dependency(%q<rake>, ["~> 0.9.2"])
+      s.add_dependency(%q<rspec>, ["~> 1.3.2"])
+      s.add_dependency(%q<yard>, ["~> 0.7.2"])
+      s.add_dependency(%q<jeweler>, ["~> 1.6.4"])
     else
       s.add_dependency(%q<dm-core>, [">= 1.1.0.rc0", "< 1.2"])
       s.add_dependency(%q<dm-validations>, [">= 1.1.0.rc0", "< 1.2"])
@@ -142,14 +149,13 @@ Gem::Specification.new do |s|
       s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
     end
   else
-    s.add_dependency(%q<dm-core>, [">= 1.1.0.rc0", "< 1.2"])
-    s.add_dependency(%q<dm-validations>, [">= 1.1.0.rc0", "< 1.2"])
-    s.add_dependency(%q<dm-constraints>, [">= 1.1.0.rc0", "< 1.2"])
-    s.add_dependency(%q<rake>, ["~> 0.8.7"])
-    s.add_dependency(%q<rspec>, ["~> 1.3"])
-    s.add_dependency(%q<yard>, ["~> 0.5"])
-    s.add_dependency(%q<rcov>, ["~> 0.9.7"])
-    s.add_dependency(%q<jeweler>, ["~> 1.5.2"])
+    s.add_runtime_dependency(%q<dm-core>, ["~> 1.3.0.beta"])
+    s.add_development_dependency(%q<dm-validations>, ["~> 1.3.0.beta"])
+    s.add_development_dependency(%q<dm-constraints>, ["~> 1.3.0.beta"])
+    s.add_development_dependency(%q<rake>, ["~> 0.9.2"])
+    s.add_development_dependency(%q<rspec>, ["~> 1.3.2"])
+    s.add_development_dependency(%q<yard>, ["~> 0.7.2"])
+    s.add_development_dependency(%q<jeweler>, ["~> 1.6.4"])
   end
 end
 
